@@ -1,10 +1,10 @@
 # ArtObjectGallery
-App implemented for the purpose of holding EPAM technical task.
+App implemented for the purpose of holding EPAM technical task.\
 
-Programming Language: Kotlin
-Architecture: Multi-Module Architecture + CLEAN Architecture + MVVM
-Multithreading: Coroutines
-Dependency Injection: Hilt
-Data flow: Flows, StateFlows
-UI: Jetpack Compose
-Testing: Unit tests, Instrumented Tests, UI Tests
+Programming Language: <b>Kotlin</b>\
+Architecture: <b>Multi-Module Architecture + CLEAN Architecture + MVVM</b>\
+Multithreading: <b>Coroutines</b>\
+Dependency Injection: <b>Hilt</b>\
+Data flow: <b>Flows, StateFlows</b>\
+UI: <b>Jetpack Compose</b>\
+Testing: <b>Unit tests, Instrumented Tests, UI Tests</b>\
