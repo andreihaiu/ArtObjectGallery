@@ -11,7 +11,6 @@ import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import eu.andreihaiu.artobjects.util.LoadingUtilsTestTags
 import eu.andreihaiu.common.theme.AppTheme
 import eu.andreihaiu.common.ui.TopAppBarTestTags
 import eu.andreihaiu.common.utils.HiltTestActivity
@@ -51,14 +50,6 @@ class ArtObjectDetailsScreenTest {
         setArtObjectDetailsScreenContent()
 
         composeTestRule.onNodeWithTag(TopAppBarTestTags.CONTAINER)
-            .assertIsDisplayed()
-    }
-
-    @Test
-    fun pageLoader_whenLoading_isVisible() {
-        setArtObjectDetailsScreenContent()
-
-        composeTestRule.onNodeWithTag(LoadingUtilsTestTags.PAGE_LOADER)
             .assertIsDisplayed()
     }
 

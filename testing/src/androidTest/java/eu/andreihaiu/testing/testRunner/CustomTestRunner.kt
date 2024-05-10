@@ -1,4 +1,4 @@
-package eu.andreihaiu.artobjectsgallery.testRunner
+package eu.andreihaiu.testing.testRunner
 
 import android.app.Application
 import android.content.Context

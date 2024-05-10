@@ -19,6 +19,7 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import eu.andreihaiu.artobjects.R
 import eu.andreihaiu.artobjects.artObjectsOverview.ArtObjectsOverviewTestTags.ART_OBJECT_ITEM
 import eu.andreihaiu.artobjects.artObjectsOverview.ArtObjectsOverviewTestTags.CONTAINER
+import eu.andreihaiu.artobjects.artObjectsOverview.ArtObjectsOverviewTestTags.ITEMS_CONTAINER
 import eu.andreihaiu.artobjects.util.ErrorMessage
 import eu.andreihaiu.artobjects.util.LoadingNextPageItem
 import eu.andreihaiu.artobjects.util.PageLoader
@@ -28,6 +29,7 @@ import eu.andreihaiu.domain.entities.ArtObjectEntity
 @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
 object ArtObjectsOverviewTestTags {
     const val CONTAINER = "artObjectOverviewContainer"
+    const val ITEMS_CONTAINER = "artObjectOverviewItemsContainer"
     const val ART_OBJECT_ITEM = "artObjectItem"
 }
 
@@ -56,7 +58,9 @@ fun ArtObjectsOverview(
     onItemClick: (ArtObjectEntity) -> Unit
 ) {
     LazyColumn(
-        modifier = Modifier.then(modifier)
+        modifier = Modifier
+            .then(modifier)
+            .testTag(ITEMS_CONTAINER)
     ) {
         item { Spacer(modifier = Modifier.padding(4.dp)) }
         items(artObjects.itemCount) { index ->

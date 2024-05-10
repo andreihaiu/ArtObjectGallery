@@ -1,4 +1,4 @@
-package eu.andreihaiu.artobjects.fakeData
+package eu.andreihaiu.testing.fakeData
 
 import dagger.Module
 import dagger.Provides

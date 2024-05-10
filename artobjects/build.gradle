@@ -4,7 +4,7 @@ android {
     namespace 'eu.andreihaiu.artobjects'
 
     defaultConfig {
-        testInstrumentationRunner "eu.andreihaiu.artobjects.testRunner.CustomTestRunner"
+        testInstrumentationRunner "eu.andreihaiu.testing.testRunner.CustomTestRunner"
     }
     testOptions {
         unitTests.returnDefaultValues = true
@@ -15,6 +15,7 @@ android {
 dependencies {
     implementation project(':common')
     implementation project(':domain')
+    implementation project(':testing')
     testImplementation project(':data')
     androidTestImplementation project(':data')
 }

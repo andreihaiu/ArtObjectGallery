@@ -2,9 +2,9 @@ package eu.andreihaiu.artobjects.artObjectsOverview
 
 import android.util.Log
 import androidx.paging.testing.asSnapshot
-import eu.andreihaiu.artobjects.base.BaseViewModelTest
-import eu.andreihaiu.artobjects.fakeData.FakeArtObjectsRepositoryImpl
-import eu.andreihaiu.artobjects.fakeData.FakeArtObjectsUseCase
+import eu.andreihaiu.testing.base.BaseViewModelTest
+import eu.andreihaiu.testing.fakeData.FakeArtObjectsRepositoryImpl
+import eu.andreihaiu.testing.fakeData.FakeArtObjectsUseCase
 import io.mockk.every
 import io.mockk.mockkStatic
 import junit.framework.TestCase.assertEquals

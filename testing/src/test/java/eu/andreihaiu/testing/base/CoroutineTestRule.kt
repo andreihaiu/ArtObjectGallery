@@ -1,4 +1,4 @@
-package eu.andreihaiu.artobjects.base
+package eu.andreihaiu.testing.base
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

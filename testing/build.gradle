@@ -1,0 +1,5 @@
+apply from: '../config.gradle'
+
+android {
+    namespace 'eu.andreihaiu.testing'
+}

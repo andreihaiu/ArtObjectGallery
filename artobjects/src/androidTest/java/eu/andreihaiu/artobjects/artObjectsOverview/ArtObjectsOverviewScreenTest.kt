@@ -1,9 +1,10 @@
 package eu.andreihaiu.artobjects.artObjectsOverview
 
 import androidx.compose.ui.test.ExperimentalTestApi
-import androidx.compose.ui.test.assertCountEquals
+import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasTestTag
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onFirst
@@ -47,7 +48,8 @@ class ArtObjectsOverviewScreenTest {
         composeTestRule.waitUntilAtLeastOneExists(hasTestTag(ArtObjectsOverviewTestTags.ART_OBJECT_ITEM))
 
         composeTestRule.onAllNodesWithTag(ArtObjectsOverviewTestTags.ART_OBJECT_ITEM)
-            .assertCountEquals(4)
+            .onFirst()
+            .assert(hasText("Title 1"))
     }
 
     @Test

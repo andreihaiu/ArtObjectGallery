@@ -1,4 +1,4 @@
-package eu.andreihaiu.artobjects.fakeData
+package eu.andreihaiu.testing.fakeData
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
@@ -20,7 +20,7 @@ class FakeArtObjectsRepositoryImpl : ArtObjectsRepository {
             imageUrl = null,
             headerImageUrl = null,
             productionPlaces = listOf(),
-            title = null
+            title = "Title $it"
         )
     }
 
@@ -28,7 +28,7 @@ class FakeArtObjectsRepositoryImpl : ArtObjectsRepository {
     private val pagingSource = pagingSourceFactory()
 
     override suspend fun fetchArtObjects(): Flow<PagingData<ArtObjectEntity>> {
-        return Pager(config = PagingConfig(pageSize = 4, prefetchDistance = 1),
+        return Pager(config = PagingConfig(pageSize = 10, prefetchDistance = 1),
             pagingSourceFactory = { pagingSource }).flow
     }
 

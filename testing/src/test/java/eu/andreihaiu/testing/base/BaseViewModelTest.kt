@@ -1,4 +1,4 @@
-package eu.andreihaiu.artobjects.base
+package eu.andreihaiu.testing.base
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.LifecycleOwner

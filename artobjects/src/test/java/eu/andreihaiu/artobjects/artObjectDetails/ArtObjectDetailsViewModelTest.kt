@@ -1,7 +1,7 @@
 package eu.andreihaiu.artobjects.artObjectDetails
 
 import app.cash.turbine.test
-import eu.andreihaiu.artobjects.base.BaseViewModelTest
+import eu.andreihaiu.testing.base.BaseViewModelTest
 import eu.andreihaiu.domain.entities.ArtObjectDetailsEntity
 import eu.andreihaiu.domain.usecases.artObjectDetails.ArtObjectDetailsUseCase
 import io.mockk.coEvery

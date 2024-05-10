@@ -17,7 +17,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "eu.andreihaiu.artobjectsgallery.testRunner.CustomTestRunner"
+        testInstrumentationRunner "eu.andreihaiu.testing.testRunner.CustomTestRunner"
         vectorDrawables {
             useSupportLibrary true
         }
@@ -51,11 +51,16 @@ android {
         unitTests.returnDefaultValues = true
         unitTests.includeAndroidResources = true
     }
+    sourceSets {
+        test.java.srcDirs += ["${project(':testing').projectDir}/src/test/java"]
+        androidTest.java.srcDirs += ["${project(':testing').projectDir}/src/androidTest/java"]
+    }
 }
 
 dependencies {
     implementation project(':data')
     implementation project(':artobjects')
+    implementation project(':testing')
 
     def composeBom = platform('androidx.compose:compose-bom:2024.05.00')
     implementation composeBom

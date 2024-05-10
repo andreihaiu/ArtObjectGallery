@@ -1,4 +1,4 @@
-package eu.andreihaiu.artobjects.fakeData
+package eu.andreihaiu.testing.fakeData
 
 import androidx.paging.PagingData
 import eu.andreihaiu.domain.entities.ArtObjectEntity

@@ -26,7 +26,7 @@ import org.junit.Test
 
 @HiltAndroidTest
 @OptIn(ExperimentalTestApi::class)
-class ArtObjectsOverviewScreenTest {
+class MainNavigationTest {
     @get:Rule(order = 0)
     val hiltRule = HiltAndroidRule(this)
 

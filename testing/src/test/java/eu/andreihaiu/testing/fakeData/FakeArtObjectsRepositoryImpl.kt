@@ -1,4 +1,4 @@
-package eu.andreihaiu.artobjectsgallery.fakeData
+package eu.andreihaiu.testing.fakeData
 
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
@@ -11,8 +11,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 
 /** Fake repository that helps with testing the paging data */
-class FakeArtObjectsRepositoryImpl : ArtObjectsRepository {
-    private val items = (1..15).toList().map {
+class FakeArtObjectsRepositoryImpl(
+    items: List<ArtObjectEntity> = (1..15).toList().map {
         ArtObjectEntity(
             longTitle = null,
             objectNumber = it.toString(),
@@ -23,12 +23,12 @@ class FakeArtObjectsRepositoryImpl : ArtObjectsRepository {
             title = "Title $it"
         )
     }
-
+) : ArtObjectsRepository {
     private val pagingSourceFactory = items.asPagingSourceFactory()
     private val pagingSource = pagingSourceFactory()
 
     override suspend fun fetchArtObjects(): Flow<PagingData<ArtObjectEntity>> {
-        return Pager(config = PagingConfig(pageSize = 4, prefetchDistance = 1),
+        return Pager(config = PagingConfig(pageSize = 10, prefetchDistance = 2),
             pagingSourceFactory = { pagingSource }).flow
     }
 
