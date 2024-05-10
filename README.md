@@ -7,4 +7,4 @@ Multithreading: <b>Coroutines</b>\
 Dependency Injection: <b>Hilt</b>\
 Data flow: <b>Flows, StateFlows</b>\
 UI: <b>Jetpack Compose</b>\
-Testing: <b>Unit tests, Instrumented Tests, UI Tests</b>\
+Testing: <b>Unit tests, Instrumented Tests, UI Tests</b>
