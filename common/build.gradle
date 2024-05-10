@@ -1,0 +1,22 @@
+apply from: '../config.gradle'
+
+android {
+    namespace 'eu.andreihaiu.common'
+}
+
+dependencies {
+    def lifecycle_version = "2.6.0-alpha03"
+    api "androidx.paging:paging-runtime:3.2.1"
+    api "androidx.paging:paging-compose:3.3.0-rc01"
+    api "io.coil-kt:coil:2.6.0"
+    api "io.coil-kt:coil-compose:2.6.0"
+    api "org.jetbrains.kotlinx:kotlinx-datetime:0.6.0-RC.2"
+    api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    api "androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version"
+    api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    api "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    api "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0'
+    api "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+    ksp "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+}

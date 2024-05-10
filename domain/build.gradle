@@ -1,0 +1,9 @@
+apply from: '../config.gradle'
+
+android {
+    namespace 'eu.andreihaiu.domain'
+}
+
+dependencies {
+    implementation project(':common')
+}

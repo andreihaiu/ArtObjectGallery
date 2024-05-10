@@ -1,0 +1,11 @@
+<resources>
+    <string name="art_objects">Art Objects Gallery</string>
+    <string name="server_fetch">Fetching data from server</string>
+    <string name="retry">Retry</string>
+    <string name="description">Description</string>
+    <string name="plaque_description">Plaque Description</string>
+    <string name="author">Author</string>
+    <string name="unknown">Unknown</string>
+    <string name="acquisition_date">Acquisition Date</string>
+    <string name="unnamed_work">Unnamed work</string>
+</resources>

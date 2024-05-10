@@ -1,0 +1,83 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'com.google.dagger.hilt.android'
+    id 'com.google.devtools.ksp'
+}
+
+android {
+    namespace 'eu.andreihaiu.artobjectsgallery'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "eu.andreihaiu.artobjectsgallery"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "eu.andreihaiu.artobjectsgallery.testRunner.CustomTestRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        compose true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion "1.5.13"
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+        unitTests.includeAndroidResources = true
+    }
+}
+
+dependencies {
+    implementation project(':data')
+    implementation project(':artobjects')
+
+    def composeBom = platform('androidx.compose:compose-bom:2024.05.00')
+    implementation composeBom
+    implementation 'com.google.dagger:hilt-android:2.50'
+    implementation 'androidx.hilt:hilt-navigation-compose:1.2.0'
+    implementation 'androidx.hilt:hilt-navigation-fragment:1.2.0'
+    implementation "androidx.paging:paging-common-ktx:3.3.0-rc01"
+    implementation "androidx.paging:paging-runtime-ktx:3.3.0-rc01"
+    implementation "androidx.paging:paging-testing:3.3.0-rc01"
+    ksp 'com.google.dagger:hilt-compiler:2.50'
+
+    androidTestImplementation composeBom
+    androidTestImplementation "androidx.compose.ui:ui-test"
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
+    androidTestImplementation "com.google.dagger:hilt-android-testing:2.50"
+    androidTestImplementation "androidx.navigation:navigation-testing:2.7.7"
+    androidTestImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.arch.core:core-testing:2.2.0'
+    androidTestImplementation "androidx.test:runner:1.4.0"
+    androidTestImplementation "androidx.test:rules:1.4.0"
+    androidTestImplementation "androidx.test:core:1.4.0"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    kspAndroidTest "com.google.dagger:hilt-android-compiler:2.50"
+}
