@@ -1,5 +1,5 @@
 # ArtObjectGallery
-App implemented for the purpose of holding EPAM technical task.
+Android Application which showcases a art objects from Rijksmuseum's collection.
 
 Programming Language: <b>Kotlin</b>\
 Architecture: <b>Multi-Module Architecture + CLEAN Architecture + MVVM</b>\
