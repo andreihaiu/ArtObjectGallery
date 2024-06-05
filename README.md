@@ -1,5 +1,5 @@
 # ArtObjectGallery
-Android Application which showcases a art objects from Rijksmuseum's collection.
+Android Application which showcases art objects from Rijksmuseum's collection.
 
 Programming Language: <b>Kotlin</b>\
 Architecture: <b>Multi-Module Architecture + CLEAN Architecture + MVVM</b>\
